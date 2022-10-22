@@ -18,11 +18,12 @@ like.addEventListener(`click`, function () {
   like.style.fontSize = "90%";
 });
 
-const identity2 = document.querySelector("#firsteName");
-const submit = document.querySelector("#submit");
+const identity2 = document.querySelector("#firstName");
 
-submit.addEventListener(`submit`, function (event) {
+document.addEventListener(`submit`, function (event) {
   event.preventDefault();
-  document.innerHTML = "Merci pour votre message";
+  alert("Merci pour votre message " + identity2.value);
 });
+
+
 
