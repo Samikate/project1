@@ -18,12 +18,20 @@ like.addEventListener(`click`, function () {
   like.style.fontSize = "90%";
 });
 
+
 const identity2 = document.querySelector("#firstName");
+const modal = document.querySelector(".modal");
+const submit = document.querySelector("#submit");
+const closeButton = document.querySelector(".close-button");
+const modalContent = document.querySelector(`.modal-content`);
 
-document.addEventListener(`submit`, function (event) {
-  event.preventDefault();
-  alert("Merci pour votre message " + identity2.value);
-});
+function toggleModal() {
+  modal.classList.toggle("show-modal");
+}
+submit.addEventListener("click", toggleModal);
 
-
+function hideModal() {
+  modal.classList.remove("show-modal");
+}
+closeButton.addEventListener("click", hideModal);
 
