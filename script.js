@@ -9,6 +9,22 @@ for (const itemNav of moveNav) {
   });
 }
 
+const myPhoto = document.querySelector("#my-photo");
+const modalS = document.querySelector(".modalS");
+const closeButtonS = document.querySelector(".close-buttonS");
+const modalContentS = document.querySelector(".modalS-content");
+
+function toggleModalS() {
+  modalS.classList.toggle("showModalS");
+  console.log("modal");
+}
+myPhoto.addEventListener("click", toggleModalS);
+
+function hideModalS() {
+  modalS.classList.remove("showModalS");
+}
+closeButtonS.addEventListener("click", hideModalS);
+
 const like = document.querySelector("#like");
 
 like.addEventListener(`click`, function () {
