@@ -1,3 +1,25 @@
+/** -- change css --*/
+
+const changeMode = document.querySelector("#dark");
+
+changeMode.onclick = function getMode() {
+  let linkCss = document.getElementById("link-css");
+  let linkDCss = document.getElementById("linkD-css");
+  let mode = linkCss.href.endsWith("style.css");
+
+  if (mode === true) {
+    linkCss.setAttribute("href", "style2.css");
+    changeMode.textContent = "Mode clair";
+    changeMode.classList.add("navD");
+  } else {
+    linkDCss.setAttribute("href", "style.css");
+    changeMode.textContent = "Mode sombre";
+    window.location.reload();
+  }
+};
+
+/** -- mouseNav --*/
+
 const moveNav = document.querySelectorAll(".nav");
 
 for (const itemNav of moveNav) {
@@ -9,6 +31,8 @@ for (const itemNav of moveNav) {
   });
 }
 
+/*-- modal 1 ---*/
+
 const myPhoto = document.querySelector("#my-photo");
 const modalS = document.querySelector(".modalS");
 const closeButtonS = document.querySelector(".close-buttonS");
@@ -16,7 +40,6 @@ const modalContentS = document.querySelector(".modalS-content");
 
 function toggleModalS() {
   modalS.classList.toggle("showModalS");
-  console.log("modal");
 }
 myPhoto.addEventListener("click", toggleModalS);
 
@@ -25,13 +48,16 @@ function hideModalS() {
 }
 closeButtonS.addEventListener("click", hideModalS);
 
-const like = document.querySelector("#like");
+/*-- like --*/
+
+const like = document.querySelector(".like");
 
 like.addEventListener(`click`, function () {
-  like.innerHTML = "Merci pour votre Like";
-  like.style.color = "var(--text2-color)";
-  like.style.fontSize = "90%";
+  like.innerHTML = "Merci pour votre Like <3";
+  like.classList.add("style");
 });
+
+/*-- modal 2 --*/
 
 const identity2 = document.querySelector("#firstName");
 const modal = document.querySelector(".modal");
