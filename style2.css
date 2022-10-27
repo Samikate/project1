@@ -1,13 +1,15 @@
 :root {
-  --footercolor:var(--text2-color);
-  --primary-color: #f8f5f1;
-  --secondary-color: #f8e8d3;
-  --third-color: black;
-  --text-color: #8c6954;
+   --footercolor: #f2e4dc;
+  --primary-color: #24221f;
+  --secondary-color: #3a332b;
+  --third-color: #ffffff;
+  --text-color: #d7a080;
   --text2-color: #805135;
   --heightImg: 14rem;
   --widthImg: 21rem;
-  --wallpaper-color: #f1e8dd;
+  --wallpaper-color: #24221f;
+ 
+ 
 }
 * {
   padding: 0%;
@@ -44,7 +46,7 @@ body {
 }
 .gardian h1 {
   text-align: letf;
-  color: var(--primary-color);
+  color: var(--third-color);
   text-shadow: 4px 4px 6px #000000;
   font-size: 300%;
   margin-left: 2%;
@@ -68,7 +70,7 @@ nav ul {
   margin-bottom: 2%;
   margin-left: 10%;
   margin-right: 10%;
-  background-color: var(--wallpaper-color);
+  background-color: var(--secondary-color);
   border-radius: 5px 40px / 80px;
   box-shadow: 4px 4px 6px #8c6954;
 }
@@ -79,10 +81,17 @@ nav ul li {
   list-style-image: url(Images/puce_taureau.png);
   list-style-position: inside;
 }
-.navJS > strong {
-  font-size: 22px;
+.navJS {
+  font-size: 22px !important;
   color: var(--text2-color);
 }
+.navD {
+  font-weight: bold;
+}
+/*.navD .navJS {
+  font-size: 22px;
+  color: var(--text2-color);
+}*/
 .carousel {
   display: flex;
   justify-content: space-evenly;
@@ -101,7 +110,7 @@ nav ul li {
     transition: all 1s ease-out; 
 }*/
 .image_c {
-  background-color: var(--wallpaper-color);
+  background-color: var(--secondary-color);
   border-radius: 5px 40px / 80px;
   padding: 0.2%;
   box-shadow: 4px 4px 6px #8c6954;
@@ -137,11 +146,11 @@ nav ul li {
   height: var(--heightImg);
 }
 .container strong {
-  color: rgb(36, 31, 31);
+  color: var(--third-color);
 }
 .textContainer {
   padding: 1%;
-  background-color: var(--wallpaper-color);
+  background-color: var(--secondary-color);
   border-radius: 5px 40px / 80px;
   box-shadow: 4px 4px 6px #8c6954;
   min-width: 25.5rem;
@@ -164,7 +173,7 @@ nav ul li {
   color: var(--third-color);
 }
 .imgContainer {
-  background-color: var(--wallpaper-color);
+  background-color: var(--secondary-color);
   border-radius: 5px 40px / 80px;
   padding: 0.2%;
   padding-bottom: 1%;
@@ -191,22 +200,25 @@ nav ul li {
   padding: 1%;
   padding-top: 2%;
   margin-bottom: 1%;
-  color: var(--text-color);
+  color: var(--third-color);
   border-radius: 5px 40px / 80px;
   box-shadow: 4px 4px 6px #8c6954;
-  background-image: url(Images/scene-of-the-camargue-transparent.jpg);
+  background-image: url(Images/scene-of-the-camargue-6-2493873_960_720.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom 10%;
   height: auto;
 }
 .fusionFooter > li > a {
-  color: var(--text-color);
+  color: var(--footercolor);
 }
 .fusionFooter p {
   font-size: 100%;
-  color: var(--text2-color);
+  color: var(--footercolor);
   text-align: center;
+}
+.fusionFooter em {
+  color: var(--footercolor);
 }
 .fusionFooter strong {
   text-shadow: 4px 4px 6px var(--primary-color);
@@ -224,16 +236,22 @@ nav ul li {
   list-style-type: none;
   font-size: 80%;
 }
+.sources ul li a {
+  color: var(--footercolor);
+}
+.sources ul li em {
+  color: var(--footercolor);
+}
 #my-photo {
   background: none;
-  color: var(--text-color);
+  color: var(--footercolor);
   border: none;
   font-style: normal;
   border-radius: 5px;
-  box-shadow: 4px 4px 6px #8c6954;
+  box-shadow: 4px 4px 6px var(--primary-color);
 }
 #my-photo strong {
-  color: var(--text2-color);
+  color: var(--footercolor);
 }
 /*---modal 1---*/
 .modalS {
@@ -253,7 +271,7 @@ nav ul li {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: var(--wallpaper-color);
+  background-color: var(--text-color);
   background-image: url("Images/Karine&Mireille à cheval.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -268,10 +286,10 @@ nav ul li {
   line-height: 1.5rem;
   text-align: center;
   cursor: pointer;
-  border: 1px solid var(--text2-color);
+  border: 1px solid var(--primary-color);
   border-radius: 0.25rem;
-  background-color: var(--wallpaper-color);
-  color: var(--text2-color);
+  background-color: var(--footercolor);
+  color: var(--primary-color);
 }
 .showModalS {
   opacity: 1;
@@ -285,9 +303,9 @@ nav ul li {
   background: none;
 }
 .style {
-  color: var(--text-color);
+  color: var(--text2-color);
   font-size: 95%;
-  background-color: var(--wallpaper-color);
+  background-color: var(--footercolor);
   border-radius: 4px;
 }
 .social {
@@ -310,7 +328,7 @@ nav ul li {
 .social2 img {
   height: 40px;
   width: 40px;
-  box-shadow: 4px 4px 6px var(--text-color);
+  box-shadow: 0px 0px 10px 6px var(--footercolor);
 }
 .social3 {
   align-self: center;
@@ -327,34 +345,36 @@ nav ul li {
   margin-top: 15%;
 }
 .contactForm input {
-  border: 1px solid var(--text-color);
-  background-color: var(--wallpaper-color);
-  color: var(--text-color);
+  border: 1px solid var(--text2-color);
+  background-color: var(--footercolor);
+  color: var(--text2-color);
   font-style: italic;
+  box-shadow: 4px 4px 6px #8c6954;
   border-radius: 3px;
 }
 #message {
   width: 100%;
   margin-left: 6%;
-  color: var(--text-color);
-  background-color: var(--wallpaper-color);
-  border: 1px solid var(--text-color);
+  color: var(--text2-color);
+  background-color: var(--footercolor);
+  border: 1px solid var(--text2-color);
+  box-shadow: 4px 4px 6px #8c6954;
   border-radius: 5px;
 }
 ::placeholder {
   font-style: italic;
-  color: var(--text-color);
+  color: var(--text2-color);
 }
 #submit {
   margin-top: 3%;
   margin-left: 6%;
   width: 40%;
   height: 20px;
-  background-color: var(--wallpaper-color);
-  color: var(--text-color);
-  border: 1px solid var(--text-color);
+  background-color: var(--footercolor);
+  color: var(--text2-color);
+  border: 1px solid var(--text2-color);
   font-style: normal;
-  box-shadow: 4px 4px 6px var(--text-color);
+  box-shadow: 4px 4px 6px var(--primary-color);
   border-radius: 3px;
 }
 /*---modal 2---*/
@@ -375,10 +395,11 @@ nav ul li {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: var(--wallpaper-color);
+  background-color: var(--footercolor);
   padding: 1rem 1.5rem;
   width: 24rem;
   border-radius: 0.5rem;
+  color: var(--text2-color);
 }
 .close-button {
   float: right;
@@ -386,9 +407,9 @@ nav ul li {
   line-height: 1.5rem;
   text-align: center;
   cursor: pointer;
-  border: 1px solid var(--text-color);
+  border: 1px solid var(--text2-color);
   border-radius: 0.25rem;
-  background-color: var(--wallpaper-color);
+  background-color: var(--footercolor);
 }
 .show-modal {
   opacity: 1;
@@ -559,7 +580,7 @@ nav ul li {
     min-height: 35%;
   }
   .imgContainer {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
   }
   .container img {
     height: 95%;
@@ -582,6 +603,16 @@ nav ul li {
   .sources ul {
     flex-wrap: nowrap;
     align-items: flex-start;
+  }
+  .sources strong {
+    color: var(--text2-color);
+    text-shadow: none;
+  }
+  .sources em {
+    color: var(--text2-color);
+  }
+  .sources ul li em {
+    color: var(--text2-color);
   }
   .social {
     flex-direction: column;
@@ -687,7 +718,7 @@ nav ul li {
     padding-top: 3%;
   }
   .imgContainer {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     width: calc(var(--widthImg) / 1.15);
     min-height: calc(var(--heightImg) / 1.1);
   }
